@@ -7,7 +7,7 @@ watchlist = File.open("watchlist.txt", "rb").read
 unless watchlist.empty?
 	list = watchlist.split("\n")
 	if list.any?
-		plist = {"Label"=>"com.yashwantc.quicksilver.plist", "OnDemand"=>true, "Program"=>"~/.quicksilver/quicksilver.sh","ProgramArguments"=>"quicksilver.sh","WatchPaths"=>list}
+		plist = {"Label"=>"com.yashwantc.quicksilver.plist", "OnDemand"=>true, "Program"=>"~/.quicksilver/quicksilver.sh","WatchPaths"=>list}
 		plist.to_plist
 		File.open("com.yashwantc.quicksilver.plist", 'w+') {|f| f.write(plist.to_plist) }
 		unless plist.nil? && File.exist?("com.yashwantc.quicksilver.plist")

@@ -1,21 +1,13 @@
 #!/bin/bash
 # Copyright (c) 2014, Yashwant Chauhan
 # install.sh
-# Needs to be run by sudo
 
 git clone https://github.com/yshchan/quicksilver.git;
-# quicksilver.git
-#	gen_plist.rb
-#	quicksilver.rb
-# 	install.sh
-#	testFolder
-#		testFile.txt 
 
 mv quicksilver ~/.quicksilver;
 cd ~/.quicksilver;
 touch watchlist.txt;
 echo "~/.quicksilver/testFolder\n" > watchlist.txt;
-gem install plist;
 ruby gen_plist.rb;
 if [ -f "com.yashwantc.quicksilver.plist" ]
 then

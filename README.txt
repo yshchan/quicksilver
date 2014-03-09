@@ -1,0 +1,1 @@
+quicksilver.rb is a simple tool that automates version control (in Mercurial) for a folder.

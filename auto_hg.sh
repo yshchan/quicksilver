@@ -9,7 +9,4 @@ if [[ -z "$REPO" ]]; then
 		hg init;
 		hg add;
 		hg commit -m "updated $REPO";
-	else
-		echo "Error: .hg already exists!";
-	fi
 fi

@@ -1,9 +1,15 @@
 #!/bin/bash
 # Copyright (c) 2014, Yashwant Chauhan
-# install.sh
+# auto_hg.sh
 
-# Work in progress...
-
-hg init;
-hg add .;
-hg commit -m "automated commit message"; # TODO: make the commit message more descriptive of the changes. 
+REPO=$1;
+if [[ -z "$REPO" ]]; then
+	cd $REPO;
+	if [ ! -d "$REPO/.hg" ]; then
+		hg init;
+		hg add;
+		hg commit -m "updated $REPO";
+	else
+		echo "Error: .hg already exists!";
+	fi
+fi

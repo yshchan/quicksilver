@@ -14,4 +14,4 @@ ln -s ~/.quicksilver/com.yashwantc.quicksilver.plist ~/Library/LaunchAgents
 echo "Greeting guests...";
 launchctl load ~/Library/LaunchAgents/com.yashwantc.quicksilver.plist;
 echo "Slicing cake...";
-echo "Quicksilver is installed! You can find it at ~/.quicksilver :)";
+echo "Quicksilver installed! You can find it at ~/.quicksilver :)";

@@ -1,6 +1,7 @@
-#!/bin/ruby
+#!/usr/bin/ruby
 # Copyright (c) 2014 Yashwant Chauhan
 # quicksilver.rb
+require 'rubygems'
 require 'plist'
 
 plist = Plist::parse_xml(open("#{Dir.home}/.quicksilver/com.yashwantc.quicksilver.plist"))

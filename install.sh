@@ -9,7 +9,7 @@ cd ~/.quicksilver;
 echo "Writing invite list...";
 touch watchlist.txt; 
 printf "~/.quicksilver/testFolder\n" > watchlist.txt; 
-bash ~/.quicksilver/qs/qs.sh --genplist
+ruby gen_plist.rb
 ln -s ~/.quicksilver/com.yashwantc.quicksilver.plist ~/Library/LaunchAgents
 echo "Greeting guests...";
 launchctl load ~/Library/LaunchAgents/com.yashwantc.quicksilver.plist;

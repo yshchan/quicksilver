@@ -1,6 +1,6 @@
 #!/bin/bash
 # Copyright (c) 2014, Yashwant Chauhan
-# auto_hg.sh
+# auto_vs.sh
 
 REPO="$1";
 if [ -d "$REPO" ]; then

@@ -3,8 +3,12 @@
 # quicksilver.rb
 require 'plist'
 
-plist = Plist::parse_xml('~/.quicksilver/com.yashwantc.quicksilver.plist')
-paths = plist['WatchPaths']
-paths.each do |path| 
-	puts `bash ~/.quicksilver/auto_hg.sh #{path}`
-end 
+plist = Plist::parse_xml(open("#{Dir.home}/.quicksilver/com.yashwantc.quicksilver.plist"))
+if plist 
+	paths = plist['WatchPaths']
+	paths.each do |path| 
+		puts `bash ~/.quicksilver/auto_hg.sh #{path}`
+	end
+else 
+	puts "plist is nil"
+end

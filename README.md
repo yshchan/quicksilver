@@ -8,6 +8,7 @@ It does so by creating a plist and loading it using `launchctl`. The plist inclu
 ```
 sudo gem install plist
 bash <(curl -s https://raw.github.com/yshchan/quicksilver/master/install.sh)
+sudo ln -s ~/.quicksilver/qs/qs /usr/bin # optional: make Quicksilver accessible globally.
 ```
 ## Uninstall
 ```

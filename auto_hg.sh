@@ -12,7 +12,7 @@ if [ -d "$REPO" ]; then
 		hg commit -m "updated $REPO";
 	else
 		printf "$REPO/.hg exists. Adding changes...\n";
-		hg add;
+		hg add .;
 		hg commit -m "updated $REPO\n";
 	fi
 else

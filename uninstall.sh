@@ -5,3 +5,5 @@
 launchctl unload ~/Library/LaunchAgents/com.yashwantc.quicksilver.plist; 
 unlink ~/Library/LaunchAgents/com.yashwantc.quicksilver.plist;
 rm -rf ~/.quicksilver;
+
+echo "Quicksilver is uninstalled :("

@@ -4,7 +4,7 @@
 require 'rubygems'
 require 'plist'
 
-watchlist = File.open("~/.quicksilver/watchlist.txt", "rb").read
+watchlist = File.open("#{Dir.home}/.quicksilver/watchlist.txt","rb").read
 unless watchlist.empty?
 	list = watchlist.split("\n")
 	if list.any?

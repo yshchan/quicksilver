@@ -11,8 +11,5 @@ unless watchlist.empty?
 		plist = {"Label"=>"com.yashwantc.quicksilver.plist", "OnDemand"=>true, "EnableGlobbing"=>true, "KeepAlive"=>true, "ProgramArguments"=>["bash","~/.quicksilver/qs/qs.sh","-l"],"WatchPaths"=>list}
 		plist.to_plist
 		File.open("com.yashwantc.quicksilver.plist", 'w+') {|f| f.write(plist.to_plist) }
-		unless plist.nil? && File.exist?("com.yashwantc.quicksilver.plist")
-			puts "Baking cake..."
-		end
 	end
 end

@@ -2,11 +2,19 @@
 # Copyright (c) 2014, Yashwant Chauhan
 # auto_hg.sh
 
-REPO=$1;
-if [[ -z "$REPO" ]]; then
+REPO="$1";
+if [ -d "$REPO" ]; then
 	cd $REPO;
 	if [ ! -d "$REPO/.hg" ]; then
-		hg init;
-		hg add;
+		printf "$REPO/.hg doesn't exist. Creating it...\n";
+		hg init .;
+		hg add .;
 		hg commit -m "updated $REPO";
+	else
+		printf "$REPO/.hg exists. Adding changes...\n";
+		hg add;
+		hg commit -m "updated $REPO\n";
+	fi
+else
+	echo "Path not correct... ($REPO)";
 fi

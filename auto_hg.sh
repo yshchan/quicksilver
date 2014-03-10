@@ -6,14 +6,14 @@ REPO="$1";
 if [ -d "$REPO" ]; then
 	cd $REPO;
 	if [ ! -d "$REPO/.hg" ]; then
-		printf "$REPO/.hg doesn't exist. Creating it...\n";
+		printf "$REPO/.hg doesn't exist.\nCreating it...\n";
 		hg init .;
 		hg add .;
 		hg commit -m "updated $REPO";
 	else
-		printf "$REPO/.hg exists. Adding changes...\n";
+		printf "$REPO/.hg exists.\nAdding changes...\n";
 		hg add .;
-		hg commit -m "updated $REPO\n";
+		hg commit -m "updated $REPO";
 	fi
 else
 	echo "Path not correct... ($REPO)";

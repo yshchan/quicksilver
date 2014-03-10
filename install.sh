@@ -8,7 +8,7 @@ mv quicksilver ~/.quicksilver;
 cd ~/.quicksilver;
 echo "Writing invite list...";
 touch watchlist.txt;
-echo "~/.quicksilver/testFolder\n" > watchlist.txt;
+printf "~/.quicksilver/testFolder\n" > watchlist.txt;
 ruby gen_plist.rb;
 ln -s ~/.quicksilver/com.yashwantc.quicksilver.plist ~/Library/LaunchAgents
 echo "Greeting guests...";

@@ -2,16 +2,12 @@
 # Copyright (c) 2014, Yashwant Chauhan
 # install.sh
 
-git clone https://github.com/yshchan/quicksilver.git;
-
-mv quicksilver ~/.quicksilver;
-cd ~/.quicksilver;
-echo "Writing invite list...";
-touch watchlist.txt; 
-printf "~/.quicksilver/testFolder\n" > watchlist.txt; 
+git clone https://github.com/yshchan/quicksilver.git
+mv quicksilver ~/.quicksilver
+cd ~/.quicksilver
+touch watchlist.txt 
+printf "~/.quicksilver/testFolder\n" > watchlist.txt
 ruby ~/.quicksilver/qs/rb/gen_plist.rb
 ln -s ~/.quicksilver/com.yashwantc.quicksilver.plist ~/Library/LaunchAgents
-echo "Greeting guests...";
-launchctl load ~/Library/LaunchAgents/com.yashwantc.quicksilver.plist;
-echo "Slicing cake...";
-echo "Quicksilver installed! You can find it at ~/.quicksilver :)";
+launchctl load ~/Library/LaunchAgents/com.yashwantc.quicksilver.plist
+echo "Quicksilver installed :)"

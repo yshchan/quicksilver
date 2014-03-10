@@ -2,7 +2,7 @@
 # Copyright (c) 2014, Yashwant Chauhan
 # qs.sh
 
-if [ -z $1]; then
+if [ -z $1 ]; then
   if [ $1 == "-l" || $1 == "--launch" ]; then
     ruby ~/.quicksilver/qs/rb/launch.rb
   fi

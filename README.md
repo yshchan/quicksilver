@@ -4,6 +4,12 @@ Quicksilver is a simple tool that automates version control for a folders on a M
 
 It does so by creating a plist and loading it using `launchctl`. The plist includes a set of *WatchPaths* which consists of folders, that it monitors for changes. Once a change has been detected it will run a shell script that will commit the changes in it's respective repository. 
 
+#### Manually detecting changes
+If for some reason `launchctl` doesn't work, you can run the `qs` command. This though only works after you make Quicksilver accessible globally. 
+```
+qs -l or qs --launch
+```
+
 ## Install
 ```
 sudo gem install plist
